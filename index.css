@@ -5,16 +5,16 @@ body {
   color: white;
 }
 
+/* HEADER: */
+
 header {
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 30px;
+  font-size: 34px;
 }
-
-/* MOBILE: */
 
 .tries-and-count {
   display: flex;
@@ -25,6 +25,8 @@ header {
 #reload {
   margin: 0 0 15px 0;
 }
+
+/* TILES - MOBILE: */
 
 #tiles {
   margin-left: auto;
@@ -52,18 +54,9 @@ header {
   background-color: skyblue;
 }
 
-/* DESKTOP: */
+/* TILES - DESKTOP: */
 
 @media screen and (min-width: 920px) {
-  .tries-and-count {
-    flex-direction: row-reverse;
-    align-items: center;
-  }
-
-  #reload {
-    margin: 0 0 0 15px;
-  }
-
   #tiles {
     width: 850px;
   }
