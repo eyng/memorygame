@@ -1,0 +1,165 @@
+body {
+  font-family: Corbel, Verdana, Geneva, Tahoma, sans-serif;
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+}
+
+header {
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.flex-row > * {
+  margin-right: 20px;
+}
+
+.flex-row > *:last-child {
+  margin-right: 0;
+}
+
+#tiles {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0 0 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
+}
+
+.tile {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 10px 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+  z-index: 1;
+  background-color: skyblue;
+}
+
+@media screen and (min-width: 920px) {
+  #tiles {
+    width: 850px;
+  }
+
+  .tile {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.closed {
+  background-size: 0 0;
+}
+
+.matched {
+  background-size: cover;
+  opacity: 0.25;
+}
+
+.unclickable {
+  pointer-events: none;
+}
+
+#reload {
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#reload:hover {
+  background-color: white;
+  color: skyblue;
+}
+
+.header-image {
+  background-image: url(images/header-p11.png);
+  border: none;
+  width: 62px;
+  height: 83.5px;
+  margin-right: 20px;
+}
+
+/* TODO: improvement: create with a single scss loop */
+.image-1 {
+  background-image: url(images/p1.png);
+}
+.image-2 {
+  background-image: url(images/p2.png);
+}
+.image-3 {
+  background-image: url(images/p3.png);
+}
+.image-4 {
+  background-image: url(images/p4.png);
+}
+.image-5 {
+  background-image: url(images/p5.png);
+}
+.image-6 {
+  background-image: url(images/p6.png);
+}
+.image-7 {
+  background-image: url(images/p7.png);
+}
+.image-8 {
+  background-image: url(images/p8.png);
+}
+.image-9 {
+  background-image: url(images/p9.png);
+}
+.image-10 {
+  background-image: url(images/p10.png);
+}
+.image-11 {
+  background-image: url(images/p11.png);
+}
+.image-12 {
+  background-image: url(images/p12.png);
+}
+.image-13 {
+  background-image: url(images/p13.png);
+}
+.image-14 {
+  background-image: url(images/p14.png);
+}
+.image-15 {
+  background-image: url(images/p15.png);
+}
+.image-16 {
+  background-image: url(images/p16.png);
+}
+.image-17 {
+  background-image: url(images/p17.png);
+}
+.image-18 {
+  background-image: url(images/p18.png);
+}
+.image-19 {
+  background-image: url(images/p19.png);
+}
+.image-20 {
+  background-image: url(images/p20.png);
+}
+.image-21 {
+  background-image: url(images/p21.png);
+}
+.image-22 {
+  background-image: url(images/p22.png);
+}
