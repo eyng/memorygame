@@ -17,8 +17,8 @@ body {
 }
 
 #title {
-  font-size: 34px;
   margin-top: 20px;
+  font-size: 46px;
 }
 
 #infoAndAction {
@@ -29,6 +29,7 @@ body {
   padding-bottom: 10px;
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 10px;
+  font-size: 28px;
 }
 
 #refresh {
