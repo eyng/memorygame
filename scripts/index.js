@@ -4,10 +4,10 @@ const IMAGE_COUNT = 22;
 const TILE_COUNT = 16;
 const SELECTED_TILE_COUNT = TILE_COUNT / 2;
 
-let openedTile1 = null;
-let openedTile2 = null;
-let trialCount = 0;
-let matchCount = 0;
+var openedTile1 = null;
+var openedTile2 = null;
+var trialCount = 0;
+var matchCount = 0;
 
 const shuffleArray = a => {
   for (let i = a.length - 1; i > 0; i--) {
@@ -105,7 +105,14 @@ const onTileClick = async e => {
   }
 };
 
-const resetTiles = () => {
+const resetGame = () => {
+  openedTile1 = null;
+  openedTile2 = null;
+  trialCount = 0;
+  matchCount = 0;
+
+  document.getElementById("trialCount").innerHTML = trialCount;
+
   const tiles = document.getElementById("tiles");
   while (tiles.firstChild) {
     tiles.removeChild(tiles.firstChild);
@@ -113,11 +120,9 @@ const resetTiles = () => {
 };
 
 const onLoad = () => {
-  resetTiles();
-  const tileNumbers =
-    window.innerWidth <= 920
-      ? createTileNumbers(IMAGE_COUNT, SELECTED_TILE_COUNT)
-      : createTileNumbers(IMAGE_COUNT, SELECTED_TILE_COUNT);
+  resetGame();
+
+  const tileNumbers = createTileNumbers(IMAGE_COUNT, SELECTED_TILE_COUNT);
   createTiles(TILE_COUNT, tileNumbers);
 };
 
