@@ -105,7 +105,15 @@ const onTileClick = async e => {
   }
 };
 
+const resetTiles = () => {
+  const tiles = document.getElementById("tiles");
+  while (tiles.firstChild) {
+    tiles.removeChild(tiles.firstChild);
+  }
+};
+
 const onLoad = () => {
+  resetTiles();
   const tileNumbers =
     window.innerWidth <= 920
       ? createTileNumbers(IMAGE_COUNT, SELECTED_TILE_COUNT)
