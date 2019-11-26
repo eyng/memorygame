@@ -1,73 +1,76 @@
 body {
   font-family: Arial, Helvetica, sans-serif, sans-serif;
   background-color: skyblue;
-  padding: 20px;
   color: white;
 }
 
-/* HEADER: */
+/* ----------------------------------------- */
+/* GAME AND HEADER: */
 
-header {
-  border-bottom: 1px solid #f0f0f0;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 34px;
-}
-
-.tries-and-count {
+#game {
+  width: 100%;
+  height: 90vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#reload {
-  margin: 0 0 15px 0;
+#title {
+  font-size: 34px;
+  margin-top: 20px;
 }
 
-/* TILES - MOBILE: */
+#infoAndAction {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+}
+
+#refresh {
+  border: 1px solid #f0f0f0;
+  border-radius: 3px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#refresh:hover {
+  background-color: white;
+  color: skyblue;
+}
+
+/* ----------------------------------------- */
+/* TILES: */
 
 #tiles {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 0 0 10px;
-  border: 1px solid #fff;
+  width: 80vmin;
+  height: 80vmin;
   border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
-  width: 450px;
 }
 
 .tile {
   cursor: pointer;
+  z-index: 1;
+  background-color: skyblue;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: inline-block;
-  width: 100px;
-  height: 100px;
-  margin: 0 10px 10px 0;
+  width: 17.4vmin;
+  height: 17.4vmin;
+  margin: 1vmin;
   border: 1px solid #f0f0f0;
   border-radius: 3px;
-  z-index: 1;
-  background-color: skyblue;
 }
 
-/* TILES - DESKTOP: */
-
-@media screen and (min-width: 920px) {
-  #tiles {
-    width: 850px;
-  }
-
-  .tile {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-/* ------------------------------------------ */
+/* ----------------------------------------- */
+/* ACTIONS: */
 
 .closed {
   background-size: 0 0;
@@ -82,27 +85,10 @@ header {
   pointer-events: none;
 }
 
-#reload {
-  border: 1px solid #f0f0f0;
-  border-radius: 3px;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-#reload:hover {
-  background-color: white;
-  color: skyblue;
-}
-
-.header-image {
-  background-image: url(images/header-p11.png);
-  border: none;
-  width: 62px;
-  height: 83.5px;
-  margin-right: 20px;
-}
-
+/* ----------------------------------------- */
+/* IMAGES: */
 /* TODO: improvement: create with a single scss loop */
+
 .image-1 {
   background-image: url(images/p1.png);
 }
